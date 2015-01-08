@@ -1,0 +1,3 @@
+2 difference between directories:
+test4.a contains c.txt that cannot be found in test4.b
+test4.b contains a.txt that cannot be found in test4.b
