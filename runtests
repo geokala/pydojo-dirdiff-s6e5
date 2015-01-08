@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 for test in tests/test-files1/*.command; do
-    if [[ $(sh ${test}) == $(cat ${test%%command}expected) ]]; then
+    if [[ $(bash ${test}) == $(cat ${test%%command}expected) ]]; then
         echo Pass.
     else
         echo Failed. Expected: $(cat ${test%%command}expected)
