@@ -1,0 +1,9 @@
+
+#! /usr/bin/env bash
+for test in tests/test-files1/*.command; do
+    if [[ eval $(cat ${test}) == cat ${test%%command}expected ]]; then
+        echo Pass.
+    else
+        echo Failed. Expected: $(cat ${test%%command}expected)
+    fi
+done
